@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right,#95f9c3,#0b3866);
+   
+}
+.todo{
+    background-color: #fff;
+    width: 100%;
+    max-width: 500px;
+    /* text-align: center; */
+    padding: 20px;
+    border-radius: 10px;
+}
+.todo h1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+   
+}
+.todo h1 img{
+    height: 30px;
+}
+.input{
+    width:100%;
+    border: 2px solid transparent;
+    background-color: rgba(235, 226, 226, 0.748);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+ .input input{
+    padding: 5px 10px;
+   background: transparent;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+
+}
+.input button{
+    background-color: rgba(239, 52, 14, 0.923);
+    color:white;
+    border-radius: 20px;
+    padding: 15px 29px;
+    border: none;
+
+}
+.task li{
+    list-style: none;
+    padding: 12px 8px 12px 50px;
+    font-size: 17px;
+    position: relative;
+}
+.task li::before{
+   content: '';
+    height: 23px;
+    width: 23px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 12px;
+    left: 8px;
+    background-image: url(images/unchecked.png);
+
+}
+ .task  .checked{
+    color: #555;
+    text-decoration: line-through;
+}
+.task .checked::before{
+    background-image: url(images/checked.png);
+}
+.task span{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    border-radius: 50%;
+    text-align: center;
+    top: 5px;
+    font-size: 22px;
+    line-height: 40px;
+    cursor: pointer;
+}
+.task span:hover{
+    background-color: #555;
+}
+@media (max-width:350px){
+    .input{
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: transparent;
+        
+    }
+    .input input{
+        background-color:rgba(235, 226, 226, 0.748);
+    }
+    .input button{
+        margin-top: 15px;
+    }
+}
